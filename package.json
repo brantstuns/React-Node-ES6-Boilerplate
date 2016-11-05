@@ -1,0 +1,44 @@
+{
+  "name": "fire-alarm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp unitSpecs",
+    "start": "webpack-dev-server --colors --port 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brantstuns/Fire-Alarm.git"
+  },
+  "author": "Brant Stuns",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brantstuns/Fire-Alarm/issues"
+  },
+  "homepage": "https://github.com/brantstuns/Fire-Alarm#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "colors": "^1.1.2",
+    "gulp": "^3.9.1",
+    "gulp-jasmine": "^2.4.0",
+    "gulp-jasmine-browser": "^1.6.0",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-util": "^3.0.7",
+    "jasmine-ajax": "^3.2.0",
+    "webpack": "^1.13.3",
+    "webpack-stream": "^3.2.0"
+  },
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-polyfill": "^6.13.0",
+    "express": "^4.14.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  }
+}
