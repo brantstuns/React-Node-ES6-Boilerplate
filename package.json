@@ -1,5 +1,5 @@
 {
-  "name": "fire-alarm",
+  "name": "React-Node-ES6-Boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,15 +8,10 @@
     "start": "webpack-dev-server --colors --port 3000"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/brantstuns/Fire-Alarm.git"
+    "type": "git"
   },
   "author": "Brant Stuns",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/brantstuns/Fire-Alarm/issues"
-  },
-  "homepage": "https://github.com/brantstuns/Fire-Alarm#readme",
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
