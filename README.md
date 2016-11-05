@@ -1,6 +1,10 @@
-![thisisfine](https://i.imgur.com/c4jt321.png)
+# React-Node-ES6-Boilerplate
+*Boilerplate setup for a fullstack React application using:*
+
+- Babel, Webpack, and ES6 for the frontend. 
+- Gulp for task running and building. 
+- Jasmine for testing. 
+- Node/Express for the server.
 
 
-*A monitor for your app's APIs.*
-
-*Hopefully this will help you figure out when they're on fire without having to step through your app and trace logs*
+**TODO:**
