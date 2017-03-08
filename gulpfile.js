@@ -1,9 +1,9 @@
 require('babel-polyfill');
 
 const gulp = require('gulp');
-const jasmineBrowser = require('gulp-jasmine-browser');
+const babel = require('babel-core/register');
+const gulpMocha = require('gulp-mocha');
 const webpack = require('webpack-stream');
-const webpackTestConfig = require('./spec/webpack.test.config');
 const webpackConfig = require('./webpack.config');
 const plumber = require('gulp-plumber');
 const gutil = require('gulp-util');
@@ -44,16 +44,19 @@ gulp.task('jasmine', function () {
 
 gulp.task('unitSpecs', function () {
   process.env.NODE_ENV = 'test';
-  return bundleUnitTestAssets({}, true)
-    .pipe(jasmineBrowser.specRunner({console: true}))
-    .pipe(jasmineBrowser.headless());
+  return gulp.src('./test/**/*Spec.js')
+    .pipe(gulpMocha({
+      compilers: {
+        js: babel
+      }
+    }));
 });
 
 function bundleUnitTestAssets (options, shouldKillProcess) {
   options = options || {};
-  return gulp.src(['./spec/support/specHelper.js', './spec/**/*Spec.js'])
+  return gulp.src(['./test/**/*Spec.js'])
     .pipe(plumber())
-    .pipe(webpack(Object.assign(webpackTestConfig, options)))
+    .pipe(webpack(Object.assign(webpackConfig, options)))
     .on('error', function (err) {
       gutil.log(gutil.colors.red('Building test assets failed'), gutil.colors.red(err));
       if (shouldKillProcess) {
